@@ -308,8 +308,8 @@ __interrupt void EQEPISR(void)
     if(i++==100) i=0;
    COUNTER_VALUE[i] = EQep1Regs.QPOSLAT;
     EQep1Regs.QCLR.bit.PCO=1;
-    EQep1Regs.QCLR.bit.PCU=1;
-    EQep1Regs.QCLR.bit.SEL=1;
+    EQep1Regs.QCLR.bit.PCU=0;
+    EQep1Regs.QCLR.bit.SEL=0;
     EQep1Regs.QCLR.bit.QDC=1;
     EQep1Regs.QCLR.bit.UTO=1;
     EQep1Regs.QCLR.bit.PCE=1;
